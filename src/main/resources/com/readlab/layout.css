@@ -1,0 +1,33 @@
+/* Layout */
+.container {
+    -fx-padding: 20px;
+}
+
+.flex {
+    -fx-display: flex;
+}
+
+.items-center {
+    -fx-alignment: center;
+}
+
+.justify-center {
+    -fx-alignment: center;
+}
+
+.justify-between {
+    -fx-alignment: space-between;
+}
+
+.p-4 {
+    -fx-padding: 16px;
+}
+
+.m-4 {
+    -fx-margin: 16px;
+}
+
+.rounded {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}

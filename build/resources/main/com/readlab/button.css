@@ -1,0 +1,43 @@
+/* Buttons */
+.button {
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 700;
+    -fx-effect: none;
+}
+
+.button-primary {
+    -fx-background-color: #0078d7;
+}
+
+.button-secondary {
+    -fx-background-color: #6c757d;
+}
+
+.button-success {
+    -fx-background-color: #28a745;
+}
+
+.button-danger {
+    -fx-background-color: #dc3545;
+}
+
+.button-warning {
+    -fx-background-color: #ffc107;
+}
+
+.button-info {
+    -fx-background-color: #17a2b8;
+}
+
+.button-light {
+    -fx-background-color: #f8f9fa;
+    -fx-text-fill: #343a40;
+}
+
+.button-dark {
+    -fx-background-color: #343a40;
+}

@@ -1,0 +1,24 @@
+/* Typography */
+.text-base {
+    -fx-font-size: 14px;
+}
+
+.text-lg {
+    -fx-font-size: 18px;
+}
+
+.text-xl {
+    -fx-font-size: 24px;
+}
+
+.font-bold {
+    -fx-font-weight: bold;
+}
+
+.font-medium {
+    -fx-font-weight: 500;
+}
+
+.font-light {
+    -fx-font-weight: 300;
+}

@@ -1,0 +1,15 @@
+.root {
+
+}
+
+.app-bar {
+    -fx-effect: none;
+}
+
+.bottom-navigation {
+    -fx-effect: none;
+}
+
+.container {
+    -fx-padding: 20;
+}

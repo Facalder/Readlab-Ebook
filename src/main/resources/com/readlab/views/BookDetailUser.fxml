@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import com.gluonhq.charm.glisten.control.BottomNavigation?>
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<View fx:id="bookUserDetail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.readlab.views.BookDetailUserPresenter">
+    <center>
+        <VBox alignment="TOP_CENTER" styleClass="container" spacing="20" BorderPane.alignment="TOP_CENTER">
+            <ImageView fitWidth="140" fitHeight="200" preserveRatio="true">
+                <Image url="https://via.placeholder.com/100x150.png?text=Buku+1"/>
+            </ImageView>
+
+            <Label text="[Book Title]" />
+            <Button text="Read Book" onAction="#handleReadBook" style="-fx-max-width: 100%"/>
+        </VBox>
+    </center>
+    <bottom>
+        <BottomNavigation>
+            <actionItems>
+                <BottomNavigationButton text="Beli Langsung">
+
+                </BottomNavigationButton>
+
+                <BottomNavigationButton text="Keranjang">
+                    <graphic>
+                        <Icon content="PLUS_ONE"/>
+                    </graphic>
+                </BottomNavigationButton>
+            </actionItems>
+        </BottomNavigation>
+    </bottom>
+</View>

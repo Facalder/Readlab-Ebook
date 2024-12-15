@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.gluonhq.charm.glisten.control.BottomNavigation?>
+<?import com.gluonhq.charm.glisten.control.BottomNavigationButton?>
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import com.gluonhq.charm.glisten.mvc.View?>
+
+<View fx:id="bottombar" maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-pref-width: 100%" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.readlab.components.BottomBarComponent">
+    <BottomNavigation BorderPane.alignment="CENTER">
+        <actionItems>
+            <BottomNavigationButton text="Home">
+                <graphic>
+                    <Icon content="HOME" style="-fx-text-fill: white" />
+                </graphic>
+            </BottomNavigationButton>
+            <BottomNavigationButton text="Explore">
+                <graphic>
+                    <Icon content="SEARCH" />
+                </graphic>
+            </BottomNavigationButton>
+            <BottomNavigationButton text="Whistlist">
+                <graphic>
+                    <Icon content="BOOKMARK_BORDER" />
+                </graphic>
+            </BottomNavigationButton>
+            <BottomNavigationButton text="Account">
+                <graphic>
+                    <Icon content="ACCOUNT_CIRCLE" />
+                </graphic>
+            </BottomNavigationButton>
+        </actionItems>
+    </BottomNavigation>
+</View>

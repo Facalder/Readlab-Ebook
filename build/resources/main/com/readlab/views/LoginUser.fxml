@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+
+<View fx:id="loginuser" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.readlab.views.LoginUserPresenter">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox spacing="20">
+               <VBox alignment="BOTTOM_LEFT" prefHeight="200" styleClass="container" style="-fx-background-color: #f0f0f0;">
+                  <Label text="Edukasi dan Hiburan dalam Satu Aplikasi" style="-fx-font-size: 28px; -fx-font-weight: 700; -fx-text-fill: black" />
+                  <Label text="Temukan e-book favorit Anda dan mulai perjalanan membaca hari ini" style="-fx-font-size: 16; -fx-font-weight: 600;"/>
+               </VBox>
+               <VBox spacing="20" styleClass="container">
+                  <VBox spacing="14">
+                     <Label text="Email" styleClass="label"/>
+                     <TextField fx:id="emailUser" styleClass="input"/>
+
+                     <Label text="Full Name" styleClass="label"/>
+                     <TextField fx:id="fullnameUser" styleClass="input"/>
+
+                     <Label text="Password" styleClass="label"/>
+                     <PasswordField fx:id="passwordUser" styleClass="input"/>
+                  </VBox>
+
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Login Application" onAction="#handleLogin"/>
+               </VBox>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</View>
