@@ -10,6 +10,7 @@ import com.gluonhq.charm.glisten.visual.MaterialDesignIcon;
 import com.readlab.MainApplication;
 import javafx.scene.image.Image;
 import java.util.Locale;
+import java.util.Objects;
 
 import static com.gluonhq.charm.glisten.afterburner.AppView.Flag.HOME_VIEW;
 import static com.gluonhq.charm.glisten.afterburner.AppView.Flag.SHOW_IN_DRAWER;
@@ -19,9 +20,14 @@ public class AppViewManager {
 
     public static final AppViewRegistry REGISTRY = new AppViewRegistry();
 
-    public static final AppView LOGIN_VIEW = view("Login", LoginPresenter.class, MaterialDesignIcon.HOME, SHOW_IN_DRAWER, HOME_VIEW, SKIP_VIEW_STACK);
+    public static final AppView REGISTER_VIEW = view("Register", RegisterPresenter.class, MaterialDesignIcon.HOME, HOME_VIEW, SKIP_VIEW_STACK);
+    public static final AppView LOGIN_VIEW = view("Login", LoginPresenter.class, MaterialDesignIcon.HOME);
+
     public static final AppView HOMEUSER_VIEW = view("HomeUser", HomeUserPresenter.class, MaterialDesignIcon.DASHBOARD, SHOW_IN_DRAWER);
-    
+    public static final AppView CARTUSER_VIEW = view("ReadPageUser", CartUserPresenter.class, MaterialDesignIcon.DASHBOARD, SHOW_IN_DRAWER);
+    public static final AppView DETAILBOOKUSER_VIEW = view("DetailBookUser", DetailBookUserPresenter.class, MaterialDesignIcon.DASHBOARD, SHOW_IN_DRAWER);
+    public static final AppView READPAGEUSER_VIEW = view("ReadPageUser", ReadPageUserPresenter.class, MaterialDesignIcon.DASHBOARD, SHOW_IN_DRAWER);
+
     private static AppView view(String title, Class<?> presenterClass, MaterialDesignIcon menuIcon, AppView.Flag... flags ) {
         return REGISTRY.createView(name(presenterClass), title, presenterClass, menuIcon, flags);
     }
@@ -37,7 +43,7 @@ public class AppViewManager {
 
         NavigationDrawer.Header header = new NavigationDrawer.Header("Gluon Application",
                 "Multi View Project",
-                new Avatar(21, new Image(MainApplication.class.getResourceAsStream("/icon.png"))));
+                new Avatar(21, new Image(Objects.requireNonNull(MainApplication.class.getResourceAsStream("/icon.png")))));
 
         Utils.buildDrawer(AppManager.getInstance().getDrawer(), header, REGISTRY.getViews()); 
     }

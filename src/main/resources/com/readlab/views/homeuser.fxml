@@ -1,17 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.gluonhq.charm.glisten.mvc.View?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 
-
-<View fx:id="homeuser" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.readlab.views.HomeUserPresenter">
+<View fx:id="homeUser" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.readlab.views.HomeUserPresenter">
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="%label.text" />
+            <VBox spacing="16.0">
+               <children>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Fresh Book to Start a Day!">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label text="Our recommendation book for today">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="138.0" prefWidth="560.0" spacing="16.0">
+                     <children>
+                        <ImageView fitHeight="300.0" fitWidth="200.0" pickOnBounds="true">
+                           <image>
+                              <Image url="https://placehold.co/600x400" />
+                           </image>
+                        </ImageView>
+
+                        <Label text="The Alchemist ">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+
+                        <Label text="Yusuf Noah Hardi ">
+                           <font>
+                              <Font name="System Regular" size="16.0" />
+                           </font>
+                        </Label>
+
+                        <Label text="4.9 ">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+
+                        <Button onAction="#navigateToDetailBook" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="See Details" style="-fx-background-color: #2563eb; -fx-font-weight: 700;" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
          </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
       </VBox>
    </center>
 </View>
